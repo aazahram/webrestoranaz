@@ -1,0 +1,490 @@
+/* Reset dan base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 35px;
+}
+
+.tagline {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: white;
+    color: #ff6347;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: #ff3d00;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Content Areas */
+.atas {
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.atas h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Filter Buttons */
+.pilihanmakanan {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pilihanmakanan button {
+    margin: 5px;
+    color: #ff6347;
+    background-color: white;
+    border: 2px solid #ff6347;
+    border-radius: 20px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pilihanmakanan button:hover,
+.pilihanmakanan button.active {
+    background-color: #ff6347;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Main Content Layout */
+.allcontent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    flex: 3;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.menu-card {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(3, 3, 3, 0.15);
+}
+
+.menu-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.menu-info h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.menu-info p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.price {
+    color: #ff6347;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.menu-info button {
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: background 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-info button:hover {
+    background-color: #ff3d00;
+}
+
+/* Keranjang */
+.keranjang {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 120px;
+    margin-top: 10px;
+    height: fit-content;
+    border: 1px solid #e0e0e0;
+}
+
+.keranjang h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-info {
+    flex: 2;
+    font-weight: 500;
+}
+
+.item-controls {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.small-btn {
+    background: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove-btn {
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.item-price {
+    flex: 1;
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-total {
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 2px solid #eee;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.checkout-btn, .clear-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+}
+
+.checkout-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background: #45a049;
+}
+
+.clear-btn {
+    background: #f44336;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #da190b;
+}
+
+/* Reservasi Box */
+.box {
+    background-color: white;
+    padding: 50px;
+    margin: 50px auto;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    border: 1px solid #e0e0e0;
+}
+
+.headerrsv {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.headerrsv h2 {
+    color: #333;
+    font-size: 28px;
+}
+
+.box .content {
+    margin-top: 15px;
+}
+
+.content input,
+.content textarea,
+.content select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.content button {
+    background-color: #ff6347;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.content button:hover {
+    background-color: #ff3d00;
+}
+
+/* Ulasan Styles */
+.ulasan-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.hapus-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.boxkr {
+    width: 350px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.boxkr input, .boxkr select, .boxkr textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.boxkr button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.boxkr button:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+/* ============== RESPONSIVE ================== */
+
+/* HP KECIL (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+        margin: 0 20px;
+        align-items: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .atas {
+        margin: 0 20px;
+        text-align: center;
+    }
+
+    .allcontent {
+        flex-direction: column;       /* BAGIAN PALING PENTING */
+        margin: 20px;
+    }
+
+    /* BAGIAN MENU UTAMA */
+    .menu-container {
+        display: grid;  /* WAJIB grid agar bisa responsif otomatis */
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        gap: 15px;
+        width: 100%;
+    }
+
+    .menu-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* BAGIAN KERANJANG PINDAH KE BAWAH */
+    .keranjang {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* HP LEBIH KECIL (max-width: 500px) */
+@media (max-width: 500px) {
+    .menu-container {
+        grid-template-columns: 1fr;   /* 1 kolom saja */
+    }
+}
